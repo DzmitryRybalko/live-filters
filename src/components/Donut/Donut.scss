@@ -1,0 +1,25 @@
+@import '../variables.scss';
+
+.donut {
+  position: relative;
+
+  .circle {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .percent {
+    $percent-width: 75px;
+    $percent-font-size: 30px;
+
+    color: #bdbdbd;
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    width: $percent-width;
+    left: calc(50% - #{$percent-width} / 2);
+    font-size: $percent-font-size;
+    top: calc(50% - #{$percent-font-size} / 2);
+  }
+}
