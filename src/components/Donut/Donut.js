@@ -10,7 +10,7 @@ let timer;
 
 class Donut extends React.Component {
   static propTypes = {
-    percent: React.PropTypes.number,
+    percent: React.PropTypes.number.isRequired,
   }
 
   constructor(props) {

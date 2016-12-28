@@ -9,4 +9,15 @@
   margin: 50px auto;
   background: $white;
   color: $gray-dark;
+
+  .context {
+    display: block;
+    overflow: hidden;
+  }
+
+  .checkbox label {
+     margin-right: 20px;
+     margin-bottom: 20px;
+     width: 120px;
+  }
 }

@@ -6,11 +6,11 @@ import './Filter.scss';
 
 class FilterHeader extends React.Component {
   static propTypes = {
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
+    id: React.PropTypes.string.isRequired,
+    name: React.PropTypes.string.isRequired,
     checked: React.PropTypes.bool,
-    checkedId: React.PropTypes.string,
-    switchFilter: React.PropTypes.func,
+    checkedId: React.PropTypes.string.isRequired,
+    switchFilter: React.PropTypes.func.isRequired,
   }
 
   constructor(props) {
@@ -46,7 +46,7 @@ class FilterHeader extends React.Component {
 
 class FilterBody extends React.Component {
   static propTypes = {
-    id: React.PropTypes.string,
+    id: React.PropTypes.string.isRequired,
     children: React.PropTypes.any,
   }
 
