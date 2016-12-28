@@ -80,9 +80,9 @@ class Filters extends React.Component {
           <FilterBody id="4">
             <p>
               Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback
-                boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet
+              boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet
               kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger,
-                tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock.
+              tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock.
               Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong
               meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa
               rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf,

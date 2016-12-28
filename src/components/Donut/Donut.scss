@@ -3,6 +3,8 @@
 .donut {
   position: relative;
   margin-top: 30px;
+  cursor: default;
+
 
   .circle {
     display: block;
@@ -22,5 +24,6 @@
     left: calc(50% - #{$percent-width} / 2);
     font-size: $percent-font-size;
     top: calc(50% - #{$percent-font-size} / 2);
+    user-select: none;
   }
 }

@@ -52,6 +52,7 @@ class Donut extends React.Component {
           className="circle"
           percent={percent}
           strokeWidth="6"
+          strokeColor="orange"
           />
         <div className="percent">{percent}%</div>
       </div>
