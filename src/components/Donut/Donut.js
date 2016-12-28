@@ -40,7 +40,7 @@ class Donut extends React.Component {
 
     percent += coef;
     this.setState({ percent });
-    timer = setTimeout(this.changePercent.bind(this, endPercent), 10);
+    timer = setTimeout(this.changePercent.bind(this, endPercent), 15);
   }
 
   render() {
