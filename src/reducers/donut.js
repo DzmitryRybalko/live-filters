@@ -2,7 +2,7 @@ import * as types from '../constants/ActionTypes';
 
 const initialState = {
   checkedId: '1',
-  percents: [150, 100, 50, 25],
+  percents: [0, 100, 50, 25],
 };
 
 export default function donut(state = initialState, action) {
@@ -12,6 +12,16 @@ export default function donut(state = initialState, action) {
         ...state,
         checkedId: action.id,
       };
+
+    case types.CHECK_CLICK: {
+      const percents = state.percents;
+      percents[+state.checkedId - 1] += action.percents;
+      return {
+        ...state,
+        percents,
+      };
+    }
+
 
     default: return state;
   }

@@ -6,4 +6,9 @@ export const switchFilter = (id) => ({
   id,
 });
 
+export const checkClicked = (percents) => ({
+  type: types.CHECK_CLICK,
+  percents,
+});
+
 export function epmty() { }

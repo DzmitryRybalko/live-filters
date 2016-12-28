@@ -1,2 +1,2 @@
 export const SWITCH = 'SWITCH';
-export const EMPTY = 'EMPTY';
+export const CHECK_CLICK = 'CHECK_CLICK';

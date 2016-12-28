@@ -23,11 +23,11 @@ class Filters extends React.Component {
           <FilterHeader id="4" name="Drupal" />
 
           <FilterBody id="1">
-            <Checkbox name="Checkbox1" id="1" />
-            <Checkbox name="Checkbox2" id="2" />
-            <Checkbox name="Checkbox3" id="3" />
-            <Checkbox name="Checkbox4" id="4" />
-            <Checkbox name="Checkbox5" id="5" />
+            <Checkbox name="Checkbox1" id="1" percents={40} />
+            <Checkbox name="Checkbox2" id="2" percents={40} />
+            <Checkbox name="Checkbox3" id="3" percents={40} />
+            <Checkbox name="Checkbox4" id="4" percents={40} />
+            <Checkbox name="Checkbox5" id="5" percents={40} />
           </FilterBody>
 
           <FilterBody id="2">
