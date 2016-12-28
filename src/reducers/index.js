@@ -1,5 +1,9 @@
+import { combineReducers } from 'redux';
+
 import donut from './donut';
 
-export default {
+const reducer = combineReducers({
   donut,
-};
+});
+
+export default reducer;

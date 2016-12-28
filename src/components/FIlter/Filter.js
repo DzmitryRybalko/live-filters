@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { switchFilter } from '../../actions/DonutActions';
 
 import './Filter.scss';
 
@@ -8,6 +10,7 @@ class FilterHeader extends React.Component {
     name: React.PropTypes.string,
     checked: React.PropTypes.bool,
     checkedId: React.PropTypes.string,
+    switchFilter: React.PropTypes.func,
   }
 
   constructor(props) {
@@ -18,9 +21,9 @@ class FilterHeader extends React.Component {
     };
   }
 
-  onChange = (event) => {
+  onChange = () => {
     if (this.props.checkedId === this.props.id) return;
-    console.log(this.props.id);
+    this.props.switchFilter(this.props.id);
   };
 
   render() {
@@ -47,11 +50,6 @@ class FilterBody extends React.Component {
     children: React.PropTypes.any,
   }
 
-  onClick() {
-    console.info('150');
-    return this;
-  }
-
   render() {
     return (
       <section id={`content${this.props.id}`} className="filter-body">
@@ -61,4 +59,14 @@ class FilterBody extends React.Component {
   }
 }
 
-export { FilterHeader, FilterBody };
+function mapStateToProps(state) {
+  return {
+    checkedId: state.donut.checkedId,
+  };
+}
+
+const connectedFilterHeader = connect(mapStateToProps, {
+  switchFilter,
+})(FilterHeader);
+
+export { connectedFilterHeader as FilterHeader, FilterBody };

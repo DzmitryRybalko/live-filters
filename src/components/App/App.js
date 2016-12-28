@@ -1,26 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { combineReducers, createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import promiseMiddleware from '../lib/promiseMiddleware';
 
 import './App.scss';
 import Header from '../Header';
 import Filters from '../Filters';
 import Footer from '../Footer';
-import * as reducers from '../../reducers';
+import reducer from '../../reducers';
 
-const reducer = combineReducers(reducers);
-const store = createStore(reducer);
+const store = applyMiddleware(promiseMiddleware)(createStore)(reducer);
 
 class App extends React.Component {
   render() {
     return (
-      <div className="app">
-        <Header />
-        <Filters />
-        <Footer />
-      </div>
+      <Provider store={store}>
+        <div className="app">
+          <Header />
+          <Filters />
+          <Footer />
+        </div>
+      </Provider>
     );
   }
 }

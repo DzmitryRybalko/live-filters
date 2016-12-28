@@ -17,18 +17,20 @@ class Donut extends React.Component {
     super(props);
     this.state = {
       percent: 0,
-      endPercent: this.props.percent,
     };
   }
 
   componentDidMount() {
-    this.changePercent();
+    this.changePercent(this.props.percent);
   }
 
-  changePercent() {
-    let percent = this.state.percent;
+  componentWillReceiveProps(nextProps) {
+    clearTimeout(timer);
+    this.changePercent(nextProps.percent);
+  }
 
-    const endPercent = this.state.endPercent;
+  changePercent(endPercent) {
+    let percent = this.state.percent;
     const coef = percent < endPercent ? 1 : -1;
 
     if (percent === endPercent) {
@@ -38,11 +40,12 @@ class Donut extends React.Component {
 
     percent += coef;
     this.setState({ percent });
-    timer = setTimeout(this.changePercent.bind(this), 10);
+    timer = setTimeout(this.changePercent.bind(this, endPercent), 10);
   }
 
   render() {
     const percent = this.state.percent;
+
     return (
       <div className="donut">
         <Circle
