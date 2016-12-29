@@ -16,6 +16,7 @@
   "rules": {
     "arrow-parens": "off",
     "generator-star-spacing": "off",
+    "no-plusplus": "off",
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
     "react/forbid-prop-types": "off",

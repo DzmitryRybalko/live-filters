@@ -3,7 +3,7 @@
 @import url('http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css');
 
 .filters {
-  min-width: 320px;
+  min-width: 350px;
   max-width: 800px;
   padding: 50px;
   margin: 50px auto;
@@ -16,8 +16,16 @@
   }
 
   .checkbox label {
-     margin-right: 20px;
      margin-bottom: 20px;
      width: 120px;
+  }
+
+  .result {
+    text-align: center;
+  }
+
+  .filter-body {
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }

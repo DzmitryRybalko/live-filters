@@ -11,6 +11,7 @@ class FilterHeader extends React.Component {
     checked: React.PropTypes.bool,
     checkedId: React.PropTypes.string.isRequired,
     switchFilter: React.PropTypes.func.isRequired,
+    className: React.PropTypes.string,
   }
 
   constructor(props) {
@@ -28,7 +29,7 @@ class FilterHeader extends React.Component {
 
   render() {
     const isChecked = this.props.checkedId === this.props.id;
-    const headClassName = `filter-header ${isChecked ? 'checked' : ''}`;
+    const headClassName = `filter-header ${this.props.className} ${isChecked ? 'checked' : ''}`;
 
     return (
       <div id={`filter-header-${this.props.id}`} className={headClassName}>
